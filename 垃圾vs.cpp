@@ -33,8 +33,8 @@ int main()
 		cin >> N;
 	}
 	vector<vector<long long>>dp(N + 1, vector<long long>(4, 0));
-	//第一层循环代表项数，第二层循环代表四种状态
-	//0代表-+，1代表++，2代表+-,3代表两个--。
+	//第一层项，第二层状态
+
 	dp[1][0] =1 ;
 	dp[1][2] =1 ;
 	for (int i = 2; i < N+1 ; i++)
@@ -48,5 +48,6 @@ int main()
 	long long total = get_Mod(N);
 	long long ugly = total - beautiful % MOD;
 		cout << ugly;
+
 
 }
